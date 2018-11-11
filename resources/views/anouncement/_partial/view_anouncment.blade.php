@@ -3,15 +3,27 @@
 
  @forelse($announcments as $announcment)
 
+
 <div class="course-box">
 
-    <h3>{{$announcment->title}}</h3> <br>
-    <p>{{$announcment->description}}</p>
+<div class="coursesHeader">
+            <h3 class="coursesTitle">{{$announcment->title}}</h3>
+            <h4 class="coursesSubTitle">{{$announcment->description}}</h4>
+            </div>
+            <div class="coursesFooter">
+            <div class="row">
+            <div class="col-md-12">
+            <div class="text-right">
+            <button onclick="location.href='/edit_announcement/{{$announcment->id}}';" class="btnLight">View and Edit Announcment</button>
+            </div>
+            </div>
+            </div>
 
-        <div class="text-right">
-        <a href="/edit_announcement/{{$announcment->id}}" class="btnViewCourse">View and Edit Announcment </a>
-    </div>    
-</div>
+            </div>
+                    
+            
+          </div>
+
 
 @empty
 <div>

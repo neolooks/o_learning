@@ -25,18 +25,19 @@
                   </div>
             @endif
 
-            <img src="{{ url('storage/course_file/'. $course->id . '/'.$course->id.'.jpg') }}" alt="Image Preview">
+            <img src="https://images.pexels.com/photos/574285/pexels-photo-574285.jpeg" alt="Image Preview">
+
+            <!-- <img src="{{ url('storage/course_file/'. $course->id . '/'.$course->id.'.jpg') }}" alt="Image Preview"> -->
 
             <hr>
 
             <input type="text" hidden id="course_id" value="{{$course->id}}">
 
               <div class="vCourseHeader">
-
-                        <div>{{$course->getEnroll($course->id)}} Enrolled for this course</div>
                     <div class="row">
                           <div class="col-md-12">
                                 <div class="text-left">
+                                      <div class="vCourseEnrollCount">{{$course->getEnroll($course->id)}} Enrolled for this course</div>
                                       <div class="vCourseTitle">{{$course->title}}</div>
                                       <div class="row">
                                             <div class="col-md-6">

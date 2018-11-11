@@ -1,6 +1,10 @@
-body {
+html, body {
     background: #fbfbfb;
-    font-family: "Arial",sans-serif !important;
+    font-family: "Roboto-Regular", Arial !important;
+}
+
+p {
+    margin: 0;
 }
 
 #boxshadow {
@@ -444,13 +448,13 @@ footer {
     padding: 50px 0px;
     margin-left: auto;
     margin-right: auto;
-    border-top: 5px solid #ff9a00;
+    border-top: 5px solid #E96163;
 }
 
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border: 0px solid transparent;
     -webkit-box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
@@ -479,8 +483,6 @@ a.btnViewCourse:hover {
 
 .sidebar-inner {
     width: calc(100% - 15px);
-    background: #ffffff;
-    padding: 10px 15px;
 }
 
 .mainbody {
@@ -512,15 +514,7 @@ a.btnViewCourse:hover {
     font-size: 18px;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    color: #ffffff;
-    background-color: #00c851;
-}
 
-.nav>li>a:focus, .nav>li>a:hover {
-    color: #000000;
-    background-color: #eee;
-}
 
 h3.txtPageTitle {
     font-size: 28px;
@@ -549,7 +543,7 @@ margin: -32px 0 0 0;
     padding: 0px 0px;
     display: inline-block;
     margin-left: 15px;
-    padding: 6px 0 0 0;
+    padding: 5px 0 0 0;
 }
 
 .starRateonPage {
@@ -600,7 +594,7 @@ margin: -32px 0 0 0;
     margin: 20px 0px;
     background-color: #ffffff;
     padding: 20px 25px;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.09);
+    /* box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.09); */
 }
 
 h3.lblRateTitle {
@@ -654,6 +648,12 @@ button.txtRateSubmit {
 .txtRateComment {
     font-size: 17px;
     color: rgb(78, 78, 78);
+}
+
+.announcmentBox {
+    padding: 25px 20px;
+    color: #ffffff;
+    background: #E96163;
 }
 
 .profileBox {
@@ -727,16 +727,58 @@ button.txtRateSubmit {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-button.btnLight {
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    display: inline-block;
     border: none;
     outline: none;
+    font-size: 12px;
     padding: 5px 10px 5px 10px;
-    background: #ececf7;
-    color: black;
+    background: #E96163;
+    color: #ffffff;
+    border-radius: 0px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background: #dfdfe9;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 6px 10px 4px 10px;
+    background: #ffffff;
+    color: #E96163;
+}
+
+button.btnJumbo {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 5.5px 10px 4.5px 10px;
+    background: #E96163;
+    color: #ffffff;
 }
 
 button.btnLight:Hover {
-    background: #dfdfe9;
+    background: #E96163;
+    color: #ffffff;
+}
+
+button.btnLight {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 6px 10px 4px 10px;
+    background: #f7f7f7;
+    color: #E96163;
+}
+
+button.btnLight:Hover {
+    background: #E96163;
+    color: #ffffff;
 }
 
 button.btnEdit {
@@ -755,12 +797,17 @@ button.btnEdit:hover {
 .vCourseTitle {
     font-size: 26px;
     color: #000000;
-    margin: 0 0 5px 0;
+    margin: 5px 0 5px 0;
 }
 
 .vCourseSubTitle {
     font-size: 16px;
     color: #646464;
+}
+
+.vCourseEnrollCount {
+    font-size: 14px;
+    color: #E96163;
 }
 
 .vCourseDescription {
@@ -789,4 +836,23 @@ button.btnEnroll {
 button.btnEnroll:hover {
     color: #ffffff;
     background: #00b147;
+}
+
+.searchBox {
+    background: #E96163;
+    margin: 0 0 30px 0;
+    padding: 50px 0;
+}
+
+select.searchEle, input.searchEle, button.searchEle {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    padding: 10px 25px;
+}
+
+button.searchEle {
+    color: #ffffff;
+    background: #ff7173;
 }

@@ -36,8 +36,8 @@
             </div>
             <div class="col-md-6">
             <div class="text-right">
-            <button onclick="location.href='view_course?course_id={{$course->id}} ';" class="btnLight">View Course</button>
-            <button onclick="location.href='edit_course?course_id={{$course->id}} ';" class="btnLight">Edit Course</button>
+            <button onclick="location.href='view_course?course_id={{$course->id}} ';" class="btnLight">View</button>
+            <button onclick="location.href='edit_course?course_id={{$course->id}} ';" class="btnLight">Edit</button>
             </div>
             </div>
             </div>

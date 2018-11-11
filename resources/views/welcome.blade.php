@@ -35,34 +35,34 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      
-      <br>
 
-      <div class="container row">
+<div class="searchBox">
+      <div class="container"> 
+        
 
-<div class="col-6">    
-<div class="form-group">
-  <label for="title" class="">Course Category:</label>
-  <select class="form-control" onchange="sort(this.value)" name="category" id="category">
+<div class="row">
+
+<div class="col-md-5">    
+<select class="searchEle" onchange="sort(this.value)" name="category" id="category">
       <option value="">Please Select</option>
       @foreach($categories as $category)
           <option value="{{$category->id}}">{{$category->name}}</option>
       @endforeach
   </select>
 </div>
-</div>
 
-<div class="col-6">
+<div class="col-md-5">
 
-    <div class="form-group">
-        <label for="title" class="">Search</label>
-        <input type="text" class="form-control" id="search" name="search">
-        <button onclick="search(document.getElementById('search').value)" class="btn btn-primary">Search</button>
-      </div>
+   <input type="text" class="searchEle" id="search" name="search">
 
   </div>
 
+  <div class="col-md-2">
+  <button onclick="search(document.getElementById('search').value)" class="searchEle">Search</button>
+</div>
+  </div>
 
+</div>
 </div>
       
       <!-- cources space -->

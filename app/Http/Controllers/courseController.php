@@ -37,8 +37,10 @@ class courseController extends Controller
 
         else
         {
+           
             $courses = course::get();
             $categories = category::get(); 
+
             return view('welcome', compact( 'courses'. 'categories'));
         }
 

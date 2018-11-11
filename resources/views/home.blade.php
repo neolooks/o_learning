@@ -12,15 +12,25 @@
 
         <div class="mainbody">
 
-                <ul class="nav nav-pills">
+<div class="container-fluid">
+        <div class="row">
+        <div class="md-col-6">
+                <ul class="nav-pills">
                         <li class="active"><a data-toggle="pill" href="#course">Courses</a></li>
                         <li><a data-toggle="pill" href="#announcement">Announcment</a></li>
                 </ul>
+        </div>
+        <div class="md-col-6">
+        
+        </div>
+        </div>
+        </div>
+                
 
                 <div class="tab-content">
                         <div id="course" class="tab-pane fade in active">
                             <div class="pageTopBar">
-                            <a href="/create_course" class="btnCreate">Create A Course</a>
+                            <button onclick="location.href='/create_course';" class="btnJumbo">Create A Course</button>
                             </div>
 
                             <div>
@@ -31,7 +41,7 @@
 
                         <div id="announcement" class="tab-pane fade">
                             <div class="pageTopBar">
-                                <a href="/create_announcment" class="btnCreate"> Create A Anouncment</a>
+                                <button onclick="location.href='/create_announcment';" class="btnJumbo">Create A Anouncment</button>
                             </div>
 
                             <div>

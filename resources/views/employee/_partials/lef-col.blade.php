@@ -42,7 +42,7 @@
 @if(Request::url() !== 'http://olearning.local/home' )
 
 @forelse($announcments as $announcment)
-<div class="profileBox">
+<div class="announcmentBox">
     
       <div class="pbTitle">{{$announcment->title}}</div>
     <br>
