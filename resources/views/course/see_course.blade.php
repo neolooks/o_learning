@@ -32,6 +32,8 @@
             <input type="text" hidden id="course_id" value="{{$course->id}}">
 
               <div class="vCourseHeader">
+
+                        <div>{{$course->getEnroll($course->id)}} Enrolled for this course</div>
                     <div class="row">
                           <div class="col-md-12">
                                 <div class="text-left">

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Storage;    
 use Illuminate\Support\Facades\File;
 use App\course;
+use App\anouncment;
 
 use Illuminate\Http\Request;
 
@@ -24,8 +25,10 @@ class employeeController extends Controller
       $courses =  course::join('following_courses', 'following_courses.course_id', '=', 'courses.id')
         ->where('following_courses.user_id', '=', Auth::user()->id)
         ->get();
+    
+    $announcments = collect(new anouncment);
 
-        return view('employee.following_course', compact( 'courses'));
+        return view('employee.following_course', compact( 'courses', 'announcments'));
     }
 
     public function store(request $request)
