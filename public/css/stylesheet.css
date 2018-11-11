@@ -544,7 +544,7 @@ margin: -32px 0 0 0;
 
 .user-rating {
     direction: rtl;
-    font-size: 18px;
+    font-size: 16px;
     unicode-bidi: bidi-override;
     padding: 0px 0px;
     display: inline-block;
@@ -553,7 +553,7 @@ margin: -32px 0 0 0;
 }
 
 .starRateonPage {
-    margin: 0px 0 5px 0px;
+    margin: 0px 0 0px 0px;
 }
 
 .user-rating input {
@@ -730,7 +730,7 @@ button.txtRateSubmit {
 button.btnLight {
     border: none;
     outline: none;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 10px 5px 10px;
     background: #ececf7;
     color: black;
 }

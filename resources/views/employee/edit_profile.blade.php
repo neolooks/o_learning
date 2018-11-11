@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div class="container">
+<div class="row">
 <form action="/store_employee" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 
@@ -129,8 +131,8 @@
   
 </form>
   
-    
-
+</div>   
+</div>
 
 @endsection
 

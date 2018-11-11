@@ -79,29 +79,7 @@
             </div>
             </div>
 
-
-
-            
-
-            <!--
-                <div class="row">
-                  <div class="col-md-6">
-                  <div class="text-left">
-
-
-                </div>
-                  </div>
-                  <div class="col-md-6">
-                  <div class="text-right">
-                <a href="view_course?course_id={{$course->id}}" class="btnViewCourse">View Course</a>
             </div>
-                  </div>
-                </div>
-                -->
-
-
-
-                </div>
                     
             
           </div>
