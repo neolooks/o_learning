@@ -58,14 +58,16 @@
             <div class="col-md-6">
             <div class="text-left">
 
-<form id="user-rating-form">
-<span class="user-rating">
-    <input type="radio" name="rating" value="5"><span class="star"></span>
-    <input type="radio" name="rating" value="4"><span class="star"></span>
-    <input type="radio" name="rating" value="3"><span class="star"></span>
-    <input type="radio" name="rating" value="2"><span class="star"></span>
-    <input type="radio" name="rating" value="1"><span class="star"></span>
-    </span>
+<form class="user-rating-form" id="user-rating-form" >
+                  <div class="starRateonPage">
+                  <span class="user-rating">
+                  <input disabled @if($course->getAverage($course->id) == 5) checked  @endif type="radio" value="5"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->id) == 4) checked  @endif type="radio" value="4"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->id) == 3) checked  @endif type="radio" value="3"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->id) == 2) checked  @endif type="radio" value="2"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->id) == 1) checked  @endif type="radio" value="1"><span class="star"></span>
+                  </span>
+                  </div>
 </form>
 
             </div>

@@ -39,7 +39,7 @@
 
 <hr>
 
-@if(Request::url() !== 'http://olearning.local/home')
+@if(Request::url() !== 'http://olearning.local/home' )
 
 @forelse($announcments as $announcment)
 <div class="profileBox">

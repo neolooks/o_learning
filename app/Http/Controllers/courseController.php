@@ -30,14 +30,7 @@ class courseController extends Controller
             $user = User::Find(Auth::user()->id);
             $following_course = following_course::where('user_id', '=', Auth::user()->id)->get();
             $courses = course::where('user_id', '!=', Auth::user()->id)->get();
-
-            /*foreach($courses as $course)
-            {
-                $average = review::where('review_master.course_id', '=',  $course->id)->avg('rate');
-                echo $average. '-' . $course->id.',';
-            }*/
-
-            //dd($courses);
+            
             return view('welcome', compact( 'courses', 'following_course'));
         }
 
