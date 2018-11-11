@@ -1,0 +1,111 @@
+@extends('layouts.app')
+
+@section('content')
+<!-- carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:250px; background:url(https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center; background-size:cover; background-color: #eaeaea;">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner container center" >
+          <div class="item active" style="">
+           
+          </div>
+      
+          <div class="item">
+          
+          </div>
+      
+          <div class="item">
+         
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
+      <br>
+      
+      <!-- cources space -->
+      <div class="container">
+
+        @if($courses)
+        @foreach($courses as $course)
+
+         <div class="course-box">
+
+<div class="coursesHeader">
+            <h3 class="coursesTitle">{{$course->title}}</h3>
+            <h4 class="coursesSubTitle">{{$course->sub_title}}</h4>
+            </div>
+            <div class="coursesImgs">
+            <div class="thumbImg" style="background:url({{ url('storage/course_file/'. $course->id . '/'.$course->id.'.jpg') }}) no-repeat center center; background-size:cover; background-color: #eaeaea;"></div>
+            </div>
+            <div class="coursesFooter">
+            <div class="row">
+            <div class="col-md-6">
+            <div class="text-left">
+
+<form id="user-rating-form">
+<span class="user-rating">
+    <input type="radio" name="rating" value="5"><span class="star"></span>
+    <input type="radio" name="rating" value="4"><span class="star"></span>
+    <input type="radio" name="rating" value="3"><span class="star"></span>
+    <input type="radio" name="rating" value="2"><span class="star"></span>
+    <input type="radio" name="rating" value="1"><span class="star"></span>
+    </span>
+</form>
+
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="text-right">
+            <button onclick="location.href='view_course?course_id={{$course->id}} ';" class="btnLight">View Course</button>
+            </div>
+            </div>
+            </div>
+
+
+
+            
+
+            <!--
+                <div class="row">
+                  <div class="col-md-6">
+                  <div class="text-left">
+
+
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                  <div class="text-right">
+                <a href="view_course?course_id={{$course->id}}" class="btnViewCourse">View Course</a>
+            </div>
+                  </div>
+                </div>
+                -->
+
+
+
+                </div>
+                    
+            
+          </div>
+
+        
+        @endforeach
+        @endif
+    </div>
+@endsection
