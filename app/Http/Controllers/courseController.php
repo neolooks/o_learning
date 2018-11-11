@@ -29,15 +29,17 @@ class courseController extends Controller
         {
             $user = User::Find(Auth::user()->id);
             $following_course = following_course::where('user_id', '=', Auth::user()->id)->get();
+            $categories = category::get(); 
             $courses = course::where('user_id', '!=', Auth::user()->id)->get();
             
-            return view('welcome', compact( 'courses', 'following_course'));
+            return view('welcome', compact( 'courses', 'following_course', 'categories'));
         }
 
         else
         {
             $courses = course::get();
-            return view('welcome', compact( 'courses'));
+            $categories = category::get(); 
+            return view('welcome', compact( 'courses'. 'categories'));
         }
 
         /*$courses = course::get();
@@ -259,6 +261,26 @@ class courseController extends Controller
        
 
         
+    }
+
+    public function search(request $request)
+    {
+        $courses = course::where('title', 'LIKE', '%'.$request->keyword.'%')->get();
+
+        
+        $categories = category::get();     
+
+        $returnHTML = view('welcome', compact( 'courses', 'categories'))->render();
+        return response()->json(array('success' => true, 'html'=>$returnHTML));
+    }
+
+    public function sort(request $request)
+    {
+        $courses = course::where('category', '=', $request->course_id)->get();
+        $categories = category::get();     
+
+        $returnHTML = view('welcome', compact( 'courses', 'categories'))->render();
+        return response()->json(array('success' => true, 'html'=>$returnHTML));
     }
 
 
