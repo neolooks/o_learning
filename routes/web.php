@@ -64,3 +64,9 @@ Route::get('/get_student_count', 'ReportController@get_student_number');
 Route::get('/get_lecture_count', 'ReportController@get_lecture_number');
 
 
+
+Route::get('/sort', 'courseController@sort');
+
+Route::get('/search', 'courseController@search');
+
+

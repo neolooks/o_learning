@@ -37,6 +37,33 @@
       </div>
       
       <br>
+
+      <div class="container row">
+
+<div class="col-6">    
+<div class="form-group">
+  <label for="title" class="">Course Category:</label>
+  <select class="form-control" onchange="sort(this.value)" name="category" id="category">
+      <option value="">Please Select</option>
+      @foreach($categories as $category)
+          <option value="{{$category->id}}">{{$category->name}}</option>
+      @endforeach
+  </select>
+</div>
+</div>
+
+<div class="col-6">
+
+    <div class="form-group">
+        <label for="title" class="">Search</label>
+        <input type="text" class="form-control" id="search" name="search">
+        <button onclick="search(document.getElementById('search').value)" class="btn btn-primary">Search</button>
+      </div>
+
+  </div>
+
+
+</div>
       
       <!-- cources space -->
       <div class="container">
@@ -89,3 +116,46 @@
         @endif
     </div>
 @endsection
+
+<script>
+
+  
+function search(value){
+
+ $.ajax({
+    type:'GET',
+    url:'/search?keyword='+value,
+    success:function(data){
+
+      if(data.success){
+        $('#master').html('');
+        $('#master').html(data.html);
+      }
+       
+    }
+ });
+}
+
+
+
+function sort(value){
+
+
+ $.ajax({
+    type:'GET',
+    url:'/sort?course_id='+value,
+    success:function(data){
+
+      if(data.success){
+        $('#master').html('');
+        $('#master').html(data.html);
+      }
+       
+    }
+ });
+}
+
+
+
+
+</script>
