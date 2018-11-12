@@ -25,8 +25,8 @@ class employeeController extends Controller
       $courses =  course::join('following_courses', 'following_courses.course_id', '=', 'courses.id')
         ->where('following_courses.user_id', '=', Auth::user()->id)
         ->get();
-    
-    $announcments = collect(new anouncment);
+        //dd($courses);
+        $announcments = collect(new anouncment);
 
         return view('employee.following_course', compact( 'courses', 'announcments'));
     }

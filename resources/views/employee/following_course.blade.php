@@ -39,11 +39,11 @@
 <form class="user-rating-form" id="user-rating-form" >
                   <div class="starRateonPage">
                   <span class="user-rating">
-                  <input disabled @if($course->getAverage($course->id) == 5) checked  @endif type="radio" value="5"><span class="star"></span>
-                  <input disabled @if($course->getAverage($course->id) == 4) checked  @endif type="radio" value="4"><span class="star"></span>
-                  <input disabled @if($course->getAverage($course->id) == 3) checked  @endif type="radio" value="3"><span class="star"></span>
-                  <input disabled @if($course->getAverage($course->id) == 2) checked  @endif type="radio" value="2"><span class="star"></span>
-                  <input disabled @if($course->getAverage($course->id) == 1) checked  @endif type="radio" value="1"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->course_id) == 5) checked  @endif type="radio" value="5"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->course_id) == 4) checked  @endif type="radio" value="4"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->course_id) == 3) checked  @endif type="radio" value="3"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->course_id) == 2) checked  @endif type="radio" value="2"><span class="star"></span>
+                  <input disabled @if($course->getAverage($course->course_id) == 1) checked  @endif type="radio" value="1"><span class="star"></span>
                   </span>
                   </div>
 </form>
@@ -52,7 +52,7 @@
             </div>
             <div class="col-md-6">
             <div class="text-right">
-            <button onclick="location.href='view_course?course_id={{$course->id}} ';" class="btnLight">View Course</button>
+            <button onclick="location.href='view_course?course_id={{$course->course_id}} ';" class="btnLight">View Course</button>
             </div>
             </div>
             </div>

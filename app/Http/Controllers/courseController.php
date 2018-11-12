@@ -40,8 +40,7 @@ class courseController extends Controller
            
             $courses = course::get();
             $categories = category::get(); 
-
-            return view('welcome', compact( 'courses'. 'categories'));
+            return view('welcome', compact( 'courses', 'categories'));
         }
 
         /*$courses = course::get();

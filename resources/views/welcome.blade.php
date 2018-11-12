@@ -40,7 +40,7 @@
       <div class="container"> 
         
 
-<div class="row">
+ <div class="row">
 
 <div class="col-md-5">    
 <select class="searchEle" onchange="sort(this.value)" name="category" id="category">
@@ -60,7 +60,9 @@
   <div class="col-md-2">
   <button onclick="search(document.getElementById('search').value)" class="searchEle">Search</button>
 </div>
-  </div>
+  </div> 
+
+
 
 </div>
 </div>
