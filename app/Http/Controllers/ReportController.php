@@ -22,21 +22,24 @@ class ReportController extends Controller
    public function get_course_number()
    {
        $courseCount = course::count();
-       dd($courseCount);
+       return response()->json($courseCount);
+      // dd($courseCount);
 
    }
 
    public function get_student_number()
    {
        $studentCount = User::where('type', '=', 'student')->count();
-       dd($studentCount);
+       return response()->json($studentCount);
+      // dd($studentCount);
 
    }
 
    public function get_lecture_number()
    {
        $lectureCount = User::where('type', '=', 'instructor')->count();
-       dd($lectureCount);
+       return response()->json($lectureCount);
+       //dd($lectureCount);
 
    }
 

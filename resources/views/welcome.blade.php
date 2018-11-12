@@ -68,25 +68,7 @@
 </div>
 </div>
 
-@section('custom_js')
 
-<script>
-$(document).ready(function(){
-
- $.ajax({
-    type:'GET',
-    url:'/get_course_count',
-    success: function (data) {
-      if(data.success){
-        alert('sdfsdfsdf');
-      }
-    }
- });
-    
-});
-</script>
-
-@endsection
 
 
 <div class="reportBox">
@@ -95,19 +77,19 @@ $(document).ready(function(){
   <div class="row">
     <div class="col-md-4 text-center">
       <div id="rep01" class="reportCircle">
-        20
+        0
       </div>
       <div class="txtReport">Course Count</div>
     </div>
     <div class="col-md-4 text-center">
     <div id="rep02" class="reportCircle">
-        20
+        0
       </div>
       <div class="txtReport">Instructor Count</div>
     </div>
     <div class="col-md-4 text-center">
     <div id="rep03" class="reportCircle">
-        20
+        0
       </div>
       <div class="txtReport">Student Count</div>
     </div>
@@ -211,3 +193,49 @@ function sort(value){
 
 
 </script>
+
+@section('custom_js')
+
+<script>
+$(document).ready(function(){
+
+ $.ajax({
+    type:'GET',
+    url:'/get_course_count',
+    success:function(data){
+
+  $('#rep01').html(data);
+        //alert();
+      
+       
+    }
+ });
+
+ $.ajax({
+    type:'GET',
+    url:'/get_lecture_count',
+    success:function(data){
+
+  $('#rep02').html(data);
+        //alert();
+      
+       
+    }
+ });
+
+ $.ajax({
+    type:'GET',
+    url:'/get_student_count',
+    success:function(data){
+
+  $('#rep03').html(data);
+        //alert();
+      
+       
+    }
+ });
+    
+});
+</script>
+
+@endsection
