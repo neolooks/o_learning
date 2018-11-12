@@ -27,7 +27,7 @@
 
 <div class="row text-center">
     <div class="col-md-12">
-        <button onclick="location.href''" class="btnLight btnEdit">Register</button>
+        <button onclick="location.href'register'" class="btnLight btnEdit">Register</button>
     </div>
 </div>
 

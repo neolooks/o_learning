@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <!-- carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:250px; background:url(https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center; background-size:cover; background-color: #eaeaea;">
         <!-- Indicators -->
@@ -66,6 +67,27 @@
 
 </div>
 </div>
+
+@section('custom_js')
+
+<script>
+$(document).ready(function(){
+
+ $.ajax({
+    type:'GET',
+    url:'/get_course_count',
+    success: function (data) {
+      if(data.success){
+        alert('sdfsdfsdf');
+      }
+    }
+ });
+    
+});
+</script>
+
+@endsection
+
 
 <div class="reportBox">
 
@@ -147,6 +169,7 @@
 @endsection
 
 <script>
+
 
   
 function search(value){
