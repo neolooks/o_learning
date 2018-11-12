@@ -25,9 +25,9 @@
                   </div>
             @endif
 
-            <img src="https://images.pexels.com/photos/574285/pexels-photo-574285.jpeg" alt="Image Preview">
+             <!--<img src="https://images.pexels.com/photos/574285/pexels-photo-574285.jpeg" alt="Image Preview">  -->
 
-            <!-- <img src="{{ url('storage/course_file/'. $course->id . '/'.$course->id.'.jpg') }}" alt="Image Preview"> -->
+            <img src="{{ url('storage/course_file/'. $course->id . '/'.$course->id.'.jpg') }}" alt="Image Preview">
 
             <hr>
 
@@ -59,26 +59,7 @@
               </div>
 
               
-
-<!-- 
      
-              <div>
-                    {{$course->title}}
-              </div>
-
-              <hr>
-
-              <div>
-                    {{$course->sub_title}}
-              </div>
-
-              <hr>
-
-              <div>
-                    {{$course->description}}
-              </div>
-
-              <hr>
 
               <div>
                     {{$course->tool_knowledge}}
@@ -102,7 +83,7 @@
                     {{$course->name}}
               </div>
 
-              -->
+
 
               <hr>
 

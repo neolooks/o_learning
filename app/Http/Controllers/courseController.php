@@ -65,8 +65,9 @@ class courseController extends Controller
     public function create()
     {
         $categories = category::get();
-        $courses = course::where('user_id', '=', Auth::user()->id)->get();               
-        return view('course.create_course', compact('categories', 'courses'));
+        $courses = course::where('user_id', '=', Auth::user()->id)->get(); 
+        $announcments = collect(new anouncment);       
+        return view('course.create_course', compact('categories', 'courses', 'announcments'));
     }
 
     public function edit_course(request $request)
@@ -145,7 +146,7 @@ class courseController extends Controller
         $file = $request->file('course_image');
         if($file)
         {
-        $file_name = 'course_file/'. $course->id.'/'.$course->title.'_'.$course->id.'.jpg';
+        $file_name = 'course_file/'. $course->id.'/'.$course->id.'.jpg';
         Storage::disk('public')->put($file_name, File::get($file));
         //dd('done');
         }
@@ -153,7 +154,7 @@ class courseController extends Controller
         $file = $request->file('course_video');
         if($file)
         {
-        $file_name = 'course_file/'. $course->id.'/'.$course->title.'_'.$course->id.'.mp4';
+        $file_name = 'course_file/'. $course->id.'/'.$course->id.'.mp4';
         Storage::disk('public')->put($file_name, File::get($file));
  
         }
