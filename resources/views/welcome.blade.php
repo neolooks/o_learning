@@ -72,19 +72,22 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 text-center">
-      <div class="report01">
+      <div id="rep01" class="reportCircle">
         20
       </div>
+      <div class="txtReport">Course Count</div>
     </div>
     <div class="col-md-4 text-center">
-    <div class="report01">
+    <div id="rep02" class="reportCircle">
         20
       </div>
+      <div class="txtReport">Instructor Count</div>
     </div>
     <div class="col-md-4 text-center">
-    <div class="report01">
+    <div id="rep03" class="reportCircle">
         20
       </div>
+      <div class="txtReport">Student Count</div>
     </div>
   </div>
 </div>

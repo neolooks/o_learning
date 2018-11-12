@@ -840,7 +840,7 @@ button.btnEnroll:hover {
 
 .searchBox {
     background: #E96163;
-    margin: 0 0 30px 0;
+    margin: 0 0 0px 0;
     padding: 50px 0;
 }
 
@@ -859,9 +859,12 @@ button.searchEle {
 
 .reportBox {
     margin: 0 0 30px 0;
+    padding: 40px 0 30px 0;
+    background: #ffffff;
+    box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.02), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.report01 {
+.reportCircle {
     width: 130px;
     height: 130px;
     display: inline-block;
@@ -874,4 +877,13 @@ button.searchEle {
     letter-spacing: 5px;
     text-align: center;
     padding: 0 0 0 9px;
+}
+
+.txtReport {
+    padding: 0;
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    color: #E96163;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
